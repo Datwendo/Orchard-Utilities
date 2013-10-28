@@ -1,0 +1,22 @@
+﻿@model Datwendo.ContentHelpers.Settings.DummyAntiForgerySettings
+@using Orchard.Utility.Extensions
+@using Datwendo.ContentHelpers.Settings
+
+@{
+    Script.Require("FillProperties");
+}
+<fieldset>
+    <div>
+        <input id="ajaxurl" type="hidden" value='@Url.Action("GetProperties","ContentHelpers", new { area = "Datwendo.ContentHelpers"})' />
+        @Html.CheckBoxFor(m => m.InsertToken)
+        <label class="forcheckbox" for="@Html.FieldIdFor(m => m.InsertToken)">@T("Insert Token")</label>
+        <span class="hint">@T("This setting is not used actually ... so don't care")</span>
+    </div>
+</fieldset>    
+@using(Script.Head()) {
+<script type="text/javascript">
+//<![CDATA[
+    var antiForgeryToken = '@Html.AntiForgeryTokenValueOrchard()';
+//]]>
+</script>
+}

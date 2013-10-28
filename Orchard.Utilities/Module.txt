@@ -1,0 +1,13 @@
+﻿Name: Datwendo ContentHelpers
+AntiForgery: enabled
+Author: Christian Surieux
+Website: http://www.datwendo.com
+Version: 1.0
+OrchardVersion: 1.7
+Description: Various Helpers for Content Items
+Features:
+    Datwendo.ContentHelpers:
+		Name: Datwendo ContentHelpers
+        Description:   Various Helpers for Content Items
+        Category: Developer
+        Dependencies: Orchard.ContentTypes
